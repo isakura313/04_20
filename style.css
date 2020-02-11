@@ -1,0 +1,99 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap');
+
+:root{
+--main-bg-color: #010325;
+--second-bg-color: #2148A8;
+--light-color: #6F81A5;
+--prime-color: #F4EFCF;
+--danger-color: #F15B4A;
+--font-header: 'Playfair Display', serif;
+--font-parag : 'Roboto', sans-serif;
+--size-parag: 18px;
+--size-header: 32px;
+}
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+   background-color: var(--main-bg-color);
+   display: flex;
+   align-items: center;
+   height: 90px;
+   padding: 5px 20px;
+}
+#logo img {
+    width: 75px; 
+    height: 75px;
+}
+.nav{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+.nav__a{
+    text-decoration: none;
+    font-size: var(--size-header);
+    color:white;
+    font-weight: bold;
+}
+.promo{
+    background-image: url("img/main.jpg");
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.promo__h1{
+    font-size:calc(var(--size-header) * 1.2);
+    color: white;
+    font-weight: bold;
+    font-family: var(--font-header);
+}
+.promo__button{
+    background-color: var(--danger-color);
+    color: white;
+    font-size:calc(var(--size-header) /1.2);
+    padding: 15px;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-family: var(--font-parag);
+}
+.promo__button:hover{
+    cursor: pointer;
+    background-color: white;
+    color:var(--danger-color);
+    transition: all 0.5s;
+}
+
+/* soc icon */
+.soc_icons{
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+}
+.soc_icons__icon{
+    background-size: contain;
+    background-position: center center;
+    width: 45px;
+    height: 45px;
+}
+.soc_icons__icon_vk{
+    background-image: url("img/vk.png");
+}
+.soc_icons__icon_face{
+    background-image: url("img/facebook.png");
+}
+.soc_icons__icon_inst{
+    background-image: url("img/instagram.png");
+}
+/* end soc icon */
+
