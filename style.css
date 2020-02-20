@@ -12,6 +12,11 @@
 --size-parag: 18px;
 --size-header: 32px;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 .wrapper{
     width: 1200px;
     margin: 0 auto;
@@ -38,6 +43,27 @@
     color:white;
     font-weight: bold;
 }
+
+.side_panel{
+    position: fixed;
+    top: 20%;
+    left: 0%;
+    background-color: var(--danger-color);
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+}
+.side_panel li{
+    margin-bottom: 10px;
+}
+.side_panel li a{
+    color: white;
+    text-decoration: none;
+    font-size: var(--size-parag);
+}
+.side_panel li a:hover{
+    color: var(--main-bg-color);
+}
+
 .promo{
     background-image: url("img/main.jpg");
     height: 80vh;
