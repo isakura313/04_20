@@ -31,9 +31,29 @@
         </div>
         <div class="promo" id="main">
             <h1 class="promo__h1">Только красивые путешествия</h1>
-            <a href="#">
+            <a href="#" class="js-button-campaign">
                 <button class="promo__button"> Присоединяйся </button>
             </a>
+
+            <div class="overlay js-overlay-campaign">
+                <div class="popup js-popup-campaign">
+                    
+                        <form action="" method="POST">
+                            <label for="name">Введите ваше имя</label>
+                            <input type="text" name="name" placeholder="Имя" id="name" autofocus>
+                
+                            <label for="email">Введите вашу почту</label>
+                            <input type="email" name="email" placeholder="example@mail.ru" id="email" autofocus>
+                
+                            <label for="tel">Введите ваш телефон</label>
+                            <input type="tel" name="tel" placeholder="+7 (977) 458-25-72" id="tel" required>
+                            <label for="check" ><input type="checkbox" name="check" id="check" required>Я согласен с оброботкой данных</label>
+                            <button type="submit">Отправить</button>
+                        </form>
+                    
+                    <div class="close-popup js-close-campaign"></div>
+                </div>
+            </div>
 
             <div class="soc_icons">
                 <a href="https://vk.com">
@@ -163,6 +183,10 @@
 
         </footer>
     </div>
+    <a href="#" class="back-to-top"></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="main.js"></script>
 </body>
 
 </html>

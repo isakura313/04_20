@@ -6,7 +6,7 @@
 --second-bg-color: #2148A8;
 --light-color: #6F81A5;
 --prime-color: #F4EFCF;
---danger-color: #F15B4A;
+--danger-color: #ff5252;
 --font-header: 'Playfair Display', serif;
 --font-parag : 'Roboto', sans-serif;
 --size-parag: 18px;
@@ -97,6 +97,83 @@ html{
     color:var(--danger-color);
     transition: all 0.5s;
     
+}
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .8);
+	display: none;
+}
+
+.popup {
+	position: absolute;
+	width: 600px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 40px;
+	box-sizing: border-box;
+	background-color: var(--danger-color);
+	color: #fff;
+}
+
+.close-popup {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 23px;
+	height: 23px;
+	cursor: pointer;
+}
+
+.close-popup:before {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	left: -4px;
+	transform: rotate(-45deg);
+}
+
+.close-popup:after {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	transform: rotate(45deg);
+	left: -4px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+form label{
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+form input{
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+form button{
+    width: 120px;
+    height: 35px;
+    align-self: flex-end;
+    border-radius: 5px;
+    font-size: 18px;
 }
 
 /* soc icon */
@@ -272,6 +349,44 @@ html{
     text-decoration: none;
     font-size: var(--size-parag);
     font-family: var(--font-parag);
+}
+.back-to-top{
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+    width: 50px;
+    height: 50px;
+    border-color: transparent;
+    border-radius: 50%;
+    background-color: #ff5252;
+    display: none;
+}
+.back-to-top:hover,
+.back-to-top:focus{
+    filter: brightness(1.5);
+    outline: none;
+}
+.back-to-top::before,
+.back-to-top::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.back-to-top::before{
+    width: 5px;
+    height: 25px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: white;
+}
+.back-to-top::after{
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: 5px solid white;
+    border-left: 5px solid white;
 }
 
 
