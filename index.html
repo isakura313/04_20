@@ -7,7 +7,6 @@
     <title>Сайт про путешествия!</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="css/favicon.png" type="image/png">
-    
 </head>
 
 <body>
@@ -21,15 +20,33 @@
                 <a href="#about" class="nav__a"> О нас </a>
                 <a href="#contact" class="nav__a"> Контакты </a>
             </nav>
+            <div class="sign-in" id="sign-in__button"></div>
         </header>
 
-        <div class="wrap_form">
-            <form action="" method="POST">
-                <input type="text" name="name" placeholder="имя">
-                <input type="email" name="email" placeholder="email">
-                <input type="submit" value="отправить">
+
+        <div class="form-wrapper" id="form-wrapper">
+            <form action="" method="POST" class="form sign-in__form">
+                <label for="name"> Логин</label>
+                <input type="text" placeholder="login" id="name" required>
+
+                <label for="password1">Пароль</label>
+                <input type="password" placeholder="password" id="password1" required>
+
+                <label for="password2">Повторите пароль</label>
+                <input type="password" placeholder="password" id="password2" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="example@example.com" id="email" required>
+
+                <label for="check"> <input type="checkbox" name="check" id="check" required>
+                    Я согласен с обработкой данных
+                </label>
+
+                <button type="submit">Авторизация</button>
             </form>
+            <div id="sign-in__close"></div>
         </div>
+
         
         <div class="side_panel">
             <ul>
@@ -172,6 +189,7 @@
 
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
