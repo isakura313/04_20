@@ -21,6 +21,37 @@ html{
     width: 1200px;
     margin: 0 auto;
 }
+.wrap_form{
+    background-color: var(--prime-color);
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:35%;
+    left: 35%;
+    z-index: 9999;
+}
+.wrap_form form{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-around;
+}
+.wrap_form form input{
+    font-size: 14px;
+    padding: 3px;
+}
+.wrap_form form input[type="submit"]{
+    width: 90px;
+    align-self: flex-end;
+    font-size: 16px;
+}
+
+
+
 .header{
    background-color: var(--main-bg-color);
    display: flex;
@@ -65,7 +96,7 @@ html{
 }
 
 .promo{
-    background-image: url("img/main.jpg");
+    background-image: url("../img/main.jpg");
     height: 80vh;
     background-repeat: no-repeat;
     background-position: center center;
