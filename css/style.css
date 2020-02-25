@@ -201,13 +201,13 @@ html{
     height: 45px;
 }
 .soc_icons__icon_vk{
-    background-image: url("img/vk.png");
+    background-image: url("../img/vk.png");
 }
 .soc_icons__icon_face{
-    background-image: url("img/facebook.png");
+    background-image: url("../img/facebook.png");
 }
 .soc_icons__icon_inst{
-    background-image: url("img/instagram.png");
+    background-image: url("../img/instagram.png");
 }
 /* end soc icon */
 
@@ -337,7 +337,7 @@ html{
     color: white;
 }
 .logo{
-    background-image: url('img/logo.png');
+    background-image: url('../img/logo.png');
     height: 120px;
     background-size: cover;
     width: 120px;
