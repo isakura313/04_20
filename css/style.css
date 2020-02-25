@@ -27,10 +27,11 @@ html{
     width: 400px;
     height: 200px;
     border-radius: 15px;
-    display: flex;
+    /* display: flex; */
+    display: none;
     justify-content: center;
     align-items: center;
-    top:35%;
+    top:30%;
     left: 35%;
     z-index: 9999;
 }
@@ -49,7 +50,25 @@ html{
     align-self: flex-end;
     font-size: 16px;
 }
-
+i[class="fa fa-times"]{
+    font-size: 25px;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+i[class="fa fa-times"]:hover{
+    color: red;
+    cursor:pointer;
+    border: 2px solid red;
+}
 
 
 .header{
@@ -255,6 +274,29 @@ html{
     font-family: var(--font-parag);
     font-size: var(--size-parag);
     margin: 20px;
+}
+.wrap_panel{
+    padding: 100px 0 50px 0;
+}
+.wraper_faq{
+    width: 80%;
+    margin-bottom: 50px;
+}
+.faq_panel{
+    background-color: var(--main-bg-color);
+    color:white;
+    border:2px solid black;
+    padding: 15px;
+    font-size: var(--size-header);
+}
+.faq_panel:hover{
+    cursor: pointer;
+}
+.faq_answer{
+    font-size: var(--size-header);
+    border: 2px solid black;
+    padding: 5px;
+    display: none;
 }
 
 .footer{
