@@ -20,13 +20,62 @@ html{
 .wrapper{
     width: 1200px;
     margin: 0 auto;
-    
 }
+.wrap_form{
+    background-color: var(--prime-color);
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    border-radius: 15px;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top:30%;
+    left: 35%;
+    z-index: 9999;
+}
+.wrap_form form{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-around;
+}
+.wrap_form form input{
+    font-size: 14px;
+    padding: 3px;
+}
+.wrap_form form input[type="submit"]{
+    width: 90px;
+    align-self: flex-end;
+    font-size: 16px;
+}
+i[class="fa fa-times"]{
+    font-size: 25px;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+i[class="fa fa-times"]:hover{
+    color: red;
+    cursor:pointer;
+    border: 2px solid red;
+}
+
+
 .header{
    background-color: var(--main-bg-color);
    display: flex;
    align-items: center;
-   height: 120px;
+   height: 90px;
    padding: 5px 20px;
 }
 #logo img {
@@ -44,37 +93,7 @@ html{
     color:white;
     font-weight: bold;
 }
-.form_wrapper{
-    position: absolute;
-    right: 90px;
-    top: 5px;
-     box-sizing: border-box;
 
-
-}
-.form_lable{
-    font-size: 18px;
-    color: red;
-    padding: 1px;
-    }
-    .form_input{
-        
-        padding-top: 2px;
-    
-    }
-    .sumbit_button{
-        font-size: 15px;
-    width: 174px;
-    height: 35px;
-    margin-top: 3px;
-    background-color: rgb(143, 235, 166);
-    border:2px solid red;
-    border-radius: 5px;
-    
-    
-    
-    }
-    
 .side_panel{
     position: fixed;
     top: 20%;
@@ -96,7 +115,7 @@ html{
 }
 
 .promo{
-    background-image: url("img/main.jpg");
+    background-image: url("../img/main.jpg");
     height: 80vh;
     background-repeat: no-repeat;
     background-position: center center;
@@ -256,6 +275,29 @@ html{
     font-size: var(--size-parag);
     margin: 20px;
 }
+.wrap_panel{
+    padding: 100px 0 50px 0;
+}
+.wraper_faq{
+    width: 80%;
+    margin-bottom: 50px;
+}
+.faq_panel{
+    background-color: var(--main-bg-color);
+    color:white;
+    border:2px solid black;
+    padding: 15px;
+    font-size: var(--size-header);
+}
+.faq_panel:hover{
+    cursor: pointer;
+}
+.faq_answer{
+    font-size: var(--size-header);
+    border: 2px solid black;
+    padding: 5px;
+    display: none;
+}
 
 .footer{
     background-color: var(--main-bg-color);
@@ -338,30 +380,3 @@ html{
     animation-play-state: paused;
 }
 
-.btn_up{
-    position: fixed;
-    right: 60px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background:#333;
-    z-index: 1;
-    
-    }
-    .btn_up:after{
-     content: "";
-     width: 10px;
-     height: 10px;
-     border-top: 2px solid #ccc;
-     border-left:2px solid #ccc;
-     transform: rotate(45deg);
-     position: absolute;
-     top: 4px;
-     bottom:0;
-     left: 0;
-     right: 0;
-     margin: auto;
-    
-    
-    
-    }
