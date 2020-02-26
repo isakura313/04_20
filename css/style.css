@@ -13,6 +13,10 @@
 --size-header: 32px;
 }
 
+body{
+    height: 2500px;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -45,11 +49,84 @@ html{
     font-size: 14px;
     padding: 3px;
 }
-.wrap_form form input[type="submit"]{
+.sig_in{
+    background-color: var(--prime-color);
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    border-radius: 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top:30%;
+    left: 35%;
+    z-index: 9999;
+}
+.sig_in form{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-around;
+}
+.sig_in  form input{
+    font-size: 14px;
+    padding: 3px;
+}
+.sig_in form input[type="submit"]{
     width: 90px;
     align-self: flex-end;
     font-size: 16px;
 }
+
+.but{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    
+}
+
+.sigin_but{
+    margin-bottom: 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.regis{
+    font-size: 14px;
+    cursor: pointer;
+}
+.regis_in{
+    background-color: var(--prime-color);
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top:30%;
+    left: 35%;
+    z-index: 9999;
+}
+.regis_in form{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-around;
+}
+.regis_in  form input{
+    font-size: 14px;
+    padding: 3px;
+}
+.regis_in form input[type="submit"]{
+    width: 90px;
+    align-self: flex-end;
+    font-size: 16px;
+}
+.regis_go{
+    padding: 6px;
+    cursor: pointer;
+}
+
 i[class="fa fa-times"]{
     font-size: 25px;
     position: absolute;
@@ -65,6 +142,44 @@ i[class="fa fa-times"]{
     border: 2px solid black;
 }
 i[class="fa fa-times"]:hover{
+    color: red;
+    cursor:pointer;
+    border: 2px solid red;
+}
+i[class="fa fa-times cross"]{
+    font-size: 25px;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+i[class="fa fa-times cross"]:hover{
+    color: red;
+    cursor:pointer;
+    border: 2px solid red;
+}
+i[class="fa fa-times cross_1"]{
+    font-size: 25px;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+i[class="fa fa-times cross_1"]:hover{
     color: red;
     cursor:pointer;
     border: 2px solid red;
@@ -168,13 +283,13 @@ i[class="fa fa-times"]:hover{
     height: 45px;
 }
 .soc_icons__icon_vk{
-    background-image: url("img/vk.png");
+    background-image: url("../img/vk.png");
 }
 .soc_icons__icon_face{
-    background-image: url("img/facebook.png");
+    background-image: url("../img/facebook.png");
 }
 .soc_icons__icon_inst{
-    background-image: url("img/instagram.png");
+    background-image: url("../img/instagram.png");
 }
 /* end soc icon */
 
@@ -327,7 +442,7 @@ i[class="fa fa-times"]:hover{
     color: white;
 }
 .logo{
-    background-image: url('img/logo.png');
+    background-image: url('../img/logo.png');
     height: 120px;
     background-size: cover;
     width: 120px;
@@ -345,6 +460,24 @@ i[class="fa fa-times"]:hover{
     text-decoration: none;
     font-size: var(--size-parag);
     font-family: var(--font-parag);
+}
+
+i[class="fa fa-arrow-circle-up"]{
+    font-size: 60px;
+    color: var(--main-bg-color);
+}
+
+.but_top{
+    height: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    opacity: 0.2;
+    z-index: 2;
+}
+
+.but_top:hover{
+    opacity: 1;
 }
 
 
