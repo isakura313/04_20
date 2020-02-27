@@ -101,6 +101,7 @@ i[class="fa fa-times"]:hover{
     background-color: var(--danger-color);
     padding: 10px;
     border-radius: 0px 5px 5px 0px;
+    z-index:9999;
 }
 .side_panel li{
     margin-bottom: 10px;
@@ -288,6 +289,7 @@ i[class="fa fa-times"]:hover{
     border:2px solid black;
     padding: 15px;
     font-size: var(--size-header);
+    z-index:9999;
 }
 .faq_panel:hover{
     cursor: pointer;
@@ -297,6 +299,7 @@ i[class="fa fa-times"]:hover{
     border: 2px solid black;
     padding: 5px;
     display: none;
+
 }
 
 .footer{
@@ -380,3 +383,28 @@ i[class="fa fa-times"]:hover{
     animation-play-state: paused;
 }
 
+.see{
+    display: block;
+    animation-name:show;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    z-index: -1;
+}
+
+@keyframes show{
+    0%{
+        transform: translateY(-30px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.error{
+    color: red;
+    font-style:italic;
+}
