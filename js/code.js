@@ -9,6 +9,35 @@ let faq_answer = wrap_panel.querySelectorAll(".faq_answer");
 
 let form = document.querySelector("form");
 
+let calc = document.querySelector(".calc");
+
+calc.onsubmit = function(e){
+    e.preventDefault();
+    let number_1 = this.querySelector("input[name='number-1']");
+    let number_2 = this.querySelector("input[name='number-2']");
+    let answer = this.querySelector(".calc__answer");
+
+    let error_num_1 = this.querySelector(".calc__error_number-1");
+    let error_num_2 = this.querySelector(".calc__error_number-2");
+
+    if(parseFloat(number_1.value) != number_1.value){
+        error_num_1.innerHTML = "check number 1";
+        number_1.style.borderColor = "red";
+    }else{
+        error_num_1.innerHTML = "";
+        number_1.style.borderColor = "green";
+    }
+
+    if(parseFloat(number_2.value) != number_2.value){
+        error_num_2.innerHTML = "check number 2";
+        number_2.style.borderColor = "red";
+    }else{
+        error_num_2.innerHTML = "";
+        number_2.style.borderColor = "green";
+    }
+
+    answer.innerHTML = +number_1.value + +number_2.value + "";
+};
 
 form.onsubmit = function(e){
     e.preventDefault(); // отмена посыла формы
@@ -53,7 +82,7 @@ form.onsubmit = function(e){
             error_tel.innerHTML = "";
         } 
 
-}
+};
 
 
 function purge(){
