@@ -27,10 +27,18 @@
         </header>
 
         <div class="wrap_form animated">
+           
             <i class="fa fa-times"></i>
             <form action="" method="POST">
-                <input type="text" name="name" placeholder="имя">
+                <h3> Введите ваши данные</h3>
+                <p class="error"> </p>
+                <p class="error_name"></p>
+                <p class="error_email"></p>
+                <p class="error_tel"></p>
+                
+                <input type="text" name="name" placeholder="имя" >
                 <input type="email" name="email" placeholder="email">
+                <input type="tel" name="tel" placeholder="телефон">
                 <input type="submit" value="отправить">
             </form>
         </div>
@@ -40,7 +48,24 @@
                 <li> <a href="#main">Главная </a></li>
                 <li><a href="#about"> О нас</a></li>
                 <li><a href="#contact"> Контакты</a></li>
+                <li><a href="#" class="cal"> Калькулятор</a></li>
             </ul>
+
+            <div class="wrap_form wrap_form_cal animated">
+            <div class="close">
+
+                <i class="fa fa-times"></i>
+            </div>
+            <form action="">
+                <h3> Калькулятор</h3>
+                
+                <input type="number" class="number_1">
+                <input type="number" class="number_2" >
+                <div class="otv"> Ответ</div>
+                <button onclick="plus()">Сложить</button>
+            </form>
+        </div>
+            
         </div>
         <div class="promo" id="main">
             <h1 class="promo__h1">Только красивые путешествия</h1>
@@ -144,16 +169,16 @@
 <div class="wrap_panel">
 
     <div class="wraper_faq">
-        <div class="faq_panel"> <h5>Какова стоимость путешествия </h5></div>
-        <div class="faq_answer"> <p> Стоимость путешествия зависит от страны</p></div>
+        <div class="faq_panel"> <h5>Какова стоимость путешеств  h5></div>
+        <div class="faq_answer"> <p> Стоимость путешествия зав  от страны</p></div>
     </div>
     <div class="wraper_faq">
-        <div class="faq_panel"> <h5>Есть ли страховка в путешествии? </h5></div>
-        <div class="faq_answer"> <p> Нет, все будет нормально</p></div>
+        <div class="faq_panel"> <h5>Есть ли страховка в путеше  ? </h5></div>
+        <div class="faq_answer"> <p> Нет, все будет нормально  </div>
     </div>
     <div class="wraper_faq">
-        <div class="faq_panel"> <h5> Нужен ли загранник для получения визы?</h5></div>
-        <div class="faq_answer"> <p> Да, очень нужен</p></div>
+        <div class="faq_panel"> <h5> Нужен ли загранник для по  ия визы?</h5></div>
+        <div class="faq_answer"> <p> Да, очень нужен</p></div>  
     </div>
 
 </div>
