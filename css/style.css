@@ -408,3 +408,21 @@ i[class="fa fa-times"]:hover{
     color: red;
     font-style:italic;
 }
+.form__home_work{
+    display: flex;
+    align-self:center;
+    flex-direction: column;
+    color: red;
+    font-size: 15px;
+    align-items: space-between;
+   
+   }
+   .calc_btn{
+       color: red;
+       font-size: 15px;
+       border-radius: 5%;
+       background-color: blue;
+       position: relative;
+       bottom:-2px;
+       margin-bottom: 2px;
+   }

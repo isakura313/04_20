@@ -100,3 +100,13 @@ cross.onmouseover = function(){
     count++;
 }
 
+function addition() {
+    let a = parseInt(document.getElementById('a').value);
+    let b = parseInt(document.getElementById('b').value);
+
+    if (isNaN(a)==true) a=0;
+    if (isNaN(b)==true) b=0;
+
+    let c = a + b;
+
+    document.getElementById('result').innerHTML = a + " + " + b + " = " + c};
