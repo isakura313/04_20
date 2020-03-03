@@ -408,3 +408,7 @@ i[class="fa fa-times"]:hover{
     color: red;
     font-style:italic;
 }
+.calcultor{
+    display: flex;
+     flex-direction: column;
+}

@@ -100,3 +100,66 @@ cross.onmouseover = function(){
     count++;
 }
 
+//именованная функция
+//function declaration
+
+
+
+let calculator = document.querySelector(".calculator");
+let input_calc = calculator.querySelector("input");
+let btn_result = document.getElementById("btn_result");
+
+
+let size = 20;
+function get_Size(){
+    size++;
+    return size+"px";
+}
+
+btn_result.onclick = () =>{
+    //плохая проверка
+    var first_digit = +input_calc.value[0];
+    if(Number.isInteger(first_digit)){
+        try{
+        var result = eval(input_calc.value);
+        }
+        catch{
+            alert("ты дурачок?");
+        }
+        input_calc.value = result;
+        input_calc.style.fontSize = get_Size();
+
+    }
+}
+
+
+//получаем background
+// и в зависимости от температуры, которую ввеедет пользователь
+// меняем его значение
+let main = document.getElementById("main");
+let footer = document.getElementsByTagName("footer");
+
+let temp_input = document.getElementById('temp_input');
+let temp_button = document.querySelector(".temp_button");
+
+
+
+
+function changeBG(data_user){
+if (data_user < -30){
+    this.style.backgroundImage = 'url("https://images.pexels.com/photos/416728/pexels-photo-416728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")';
+} else if( data_user < 0){
+    this.style.backgroundImage = 'url("https://images.pexels.com/photos/414160/pexels-photo-414160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")'; 
+}else if (data_user < 25){
+    this.style.backgroundImage = 'url("https://images.pexels.com/photos/1209610/pexels-photo-1209610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")';
+} else if( data_user < 45){
+    this.style.backgroundImage = 'url("https://images.pexels.com/photos/1703312/pexels-photo-1703312.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")';
+}
+}
+temp_button.onclick = function(){
+    let data_user = +temp_input.value;
+    let func = changeBG.bind(main);
+    let func1 = changeBG.bind(footer[0]);
+    func(data_user);
+    func1(data_user);
+}
