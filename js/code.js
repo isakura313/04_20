@@ -70,15 +70,16 @@ for (let i = 0; i < faq_panel.length; i++) {
 }
 
 
-
-console.log(faq_panel);
-console.log(faq_answer);
-
 // задача чтобы у нас при клике на панель становился видимым блок ответа
 // не прошу что бы обратное действие
 
-button.onclick = function(){
-    wrap_form.style.display = "flex";
+// button.onclick = function(){
+//     wrap_form.style.display = "flex";
+// }
+button.onkeydown = function(e){
+    if(e.keyCode == 13){
+        wrap_form.style.display = "flex";
+    }
 }
 cross.onclick = function(){
     wrap_form.classList.add("zoomOut");
@@ -148,8 +149,7 @@ let temp_button = document.querySelector(".temp_button");
 function changeBG(data_user){
 if (data_user < -30){
     this.style.backgroundImage = 'url("https://images.pexels.com/photos/416728/pexels-photo-416728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")';
-} else if( data_user < 0){
-    this.style.backgroundImage = 'url("https://images.pexels.com/photos/414160/pexels-photo-414160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")'; 
+} else if( data_user < 0){    this.style.backgroundImage = 'url("https://images.pexels.com/photos/414160/pexels-photo-414160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")'; 
 }else if (data_user < 25){
     this.style.backgroundImage = 'url("https://images.pexels.com/photos/1209610/pexels-photo-1209610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")';
 } else if( data_user < 45){
@@ -162,4 +162,15 @@ temp_button.onclick = function(){
     let func1 = changeBG.bind(footer[0]);
     func(data_user);
     func1(data_user);
+}
+
+document.body.mouseover = function(event){
+    event.preventDefault();
+    console.log(event);
+}
+document.body.onkeydown = function(event){
+    // console.log(event.key);
+    // if(event.keyCode == 13){
+    //     alert("почему ты нажал а?");
+    // }
 }
