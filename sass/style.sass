@@ -1,0 +1,142 @@
+@import '_mixins'
+
+    
+$main-bg-color: #010325
+$second-bg-color: #2148A8
+$light-color: #6F81A5
+$prime-color: #F4EFCF
+$danger-color: #F15B4A
+$font-header: 'Playfair Display', serif
+$font-parag : 'Roboto', sans-serif
+$size-parag: 18px
+$size-header: 32px
+
+
+
+
+
+html
+    scroll-behavior: smooth
+
+.wrapper
+    width: 1200px
+    margin: 0 auto
+
+.wrap_form
+    background-color: $prime-color
+    position: fixed
+    width: 400px
+    height: 200px
+    border-radius: 15px
+    display: none
+    justify-content: center
+    align-items: center
+    top: 30%
+    left: 35%
+    z-index: 9999
+    form
+        display: flex
+        flex-direction: column
+        height: 80%
+        justify-content: space-around
+        input
+            font-size: 14px
+            padding: 3px
+        input[type="submit"]
+            width: 90px
+            align-self: flex-end
+            font-size: 16px
+i[class="fa fa-times"]
+    font-size: 25px
+    position: absolute
+    top: 3%
+    right: 2%
+    display: block
+    width: 25px
+    height: 25px
+    border-radius: 50%
+    @include centr
+    border: 2px solid black
+    &:hover
+        color: red
+        cursor: pointer
+        border: 2px solid red
+
+.header
+   background-color: $main-bg-color
+   display: flex
+   align-items: center
+   height: 90px
+   padding: 5px 20px
+
+#logo img 
+    width: 75px 
+    height: 75px
+
+.nav
+    width: 500px
+    display: flex
+    justify-content: space-around
+
+.nav__a
+    text-decoration: none
+    font-size: $size-header
+    color:white
+    font-weight: bold
+.side_panel
+    position: fixed
+    top: 20%
+    left: 0%
+    background-color: $danger-color
+    padding: 10px
+    border-radius: 0px 5px 5px 0px
+    z-index: 9999
+    li
+        margin-bottom: 10px
+    li a
+        color: white
+        text-decoration: none
+        font-size: $size-parag
+        &:hover
+            color: $main-bg-color
+
+.promo
+    height: 80vh
+    @include centr
+    @include background("../img/main.jpg")
+.promo__h1
+    font: 
+        size: $size-header* 1.2
+        weight: bold
+        family: $font-header
+    color: white
+
+.promo__button
+    background-color: $danger-color
+    color: white
+    font:
+        size: $size-header /1.2
+        family: $font-parag
+    padding: 15px
+    border-radius: 7px
+    margin-top: 20px
+    animation: scale 2s infinite alternate ease-in
+
+.promo__button:hover
+    cursor: pointer
+    background-color: white
+    color: $danger-color
+    transition: all 0.5s
+
+
+@each $icon in vk, face, inst
+    .soc_icons__icon_#{$icon}
+        background-image: url("img/#{$icon}.png")
+
+
+
+
+
+
+
+    
